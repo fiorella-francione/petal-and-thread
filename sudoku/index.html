@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f0e8" />
+    <title>Petal &amp; Thread — A little Sudoku sampler</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-wash" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="wordmark" href="#" aria-label="Petal and Thread home">
+        <span class="wordmark-mark" aria-hidden="true">✳</span>
+        <span>petal <i>&amp;</i> thread</span>
+      </a>
+      <div class="topbar-note"><span class="status-dot"></span> A quiet moment, just for you</div>
+    </header>
+
+    <main class="app-shell">
+      <section class="intro" aria-labelledby="page-title">
+        <div class="eyebrow"><span class="eyebrow-line"></span> YOUR DAILY MOMENT OF CALM <span class="eyebrow-line"></span></div>
+        <h1 id="page-title">A little <em>stitch</em> of quiet.</h1>
+        <p>One number at a time, watch your cross-stitch image come to life.</p>
+      </section>
+
+      <section class="game-layout" aria-label="Sudoku cross-stitch game">
+        <section class="board-column" aria-label="Puzzle">
+          <div class="board-topline">
+            <button class="text-button" id="new-game" type="button"><span aria-hidden="true">↻</span> New sampler</button>
+          </div>
+          <div class="game-status">
+            <div class="status-metric"><span>TIME</span><strong id="timer">00:00</strong></div>
+            <div class="status-progress">
+              <div class="status-progress-label"><span>STITCHES MADE</span><strong><span id="stitched-count">0</span> / 51 <span id="progress-percent">0%</span></strong></div>
+              <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+            </div>
+          </div>
+          <div class="board-frame">
+            <div class="sudoku-board" id="board" role="grid" aria-label="Sudoku grid"></div>
+          </div>
+          <div class="board-hint" id="game-message" aria-live="polite">
+            <span class="hint-star" aria-hidden="true">✳</span>
+          </div>
+          <div class="number-pad" id="number-pad" aria-label="Choose a number"></div>
+          <div class="board-actions">
+            <button class="action-button" id="erase" type="button"><span aria-hidden="true">⌫</span> Erase</button>
+            <span class="action-separator"></span>
+            <button class="action-button" id="hint" type="button"><span aria-hidden="true">✧</span> A little hint</button>
+            <span class="action-separator"></span>
+            <button class="action-button" id="undo" type="button"><span aria-hidden="true">↶</span> Undo</button>
+          </div>
+        </section>
+        <aside class="pattern-card" aria-labelledby="pattern-title">
+          <div class="pattern-heading">
+            <span class="pattern-sparkle" aria-hidden="true">✳</span>
+            <div>
+              <h2 id="pattern-title">A wildflower in bloom</h2>
+              <p id="pattern-message">Your stitches will bring it to life.</p>
+            </div>
+          </div>
+          <div class="pattern-hoop">
+            <canvas id="pattern-canvas" width="372" height="372" role="img" aria-label="A cross-stitch flower sampler, not yet stitched"></canvas>
+          </div>
+          <div class="pattern-progress-label"><span>THE SAMPLER</span><strong id="pattern-progress">0%</strong></div>
+          <div class="progress-track"><div class="pattern-progress-fill" id="pattern-progress-fill"></div></div>
+          <p class="pattern-caption">One little stitch at a time</p>
+        </aside>
+      </section>
+
+      <footer class="page-footer"><span>MADE SLOWLY, WITH LOVE</span><span class="footer-flower">✿</span><span>ONE SQUARE AT A TIME</span></footer>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
